@@ -22,7 +22,8 @@
 
 ## Установка (Windows)
 
-1. Собери архив `dist/CS2Prac.zip` (см. «Сборка») и распакуй его в любую папку на ПК.
+1. Скачай `CS2Prac.zip` из [последнего релиза](https://github.com/vsemvamdam/cs2-prac/releases/latest)
+   и распакуй в любую папку на ПК.
 2. Запусти `1. Установить или обновить.cmd`. Скрипт через SteamCMD ставит выделенный сервер CS2
    (больше 60 ГБ), Metamod:Source, CounterStrikeSharp, MatchZy, OpenPrefirePrac и плагин CS2 Prac,
    а на рабочем столе создаёт ярлыки «CS2 Prac — смоки» и «CS2 Prac — префаер».
