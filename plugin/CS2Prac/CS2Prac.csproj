@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>CS2Prac</AssemblyName>
+    <RootNamespace>CS2Prac</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- Обычная сборка берёт API из NuGet. Без доступа к NuGet: dotnet build -p:CssApiDir=<папка addons/counterstrikesharp/api> -->
+  <ItemGroup Condition="'$(CssApiDir)' == ''">
+    <PackageReference Include="CounterStrikeSharp.API" Version="1.0.379" ExcludeAssets="runtime" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(CssApiDir)' != ''">
+    <Reference Include="$(CssApiDir)/*.dll">
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="data/**/*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

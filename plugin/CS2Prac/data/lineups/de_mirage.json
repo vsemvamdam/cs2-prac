@@ -1,0 +1,1249 @@
+[
+ {
+  "Id": "bce4337a-cef1-421e-9a7d-2a7e12bc852e",
+  "Title": "Smoke A Ramp deep from CT Spawn",
+  "Desc": "Aim at edge of wall and top grout",
+  "Type": "smoke",
+  "Side": "CT",
+  "JumpThrow": true,
+  "Stand": [
+   -2031.969,
+   -1766.489,
+   -300.431
+  ],
+  "Aim": [
+   -16.543,
+   5.386,
+   0.0
+  ],
+  "AimPoint": [
+   -1936.531,
+   -1757.49,
+   -211.353
+  ],
+  "Dest": [
+   476.345,
+   -1531.989,
+   -255.136
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "885d6007-4902-4194-b5fa-94ce6c935814",
+  "Title": "A Main Lurk Smoke",
+  "Desc": "Middle of the line",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   509.522,
+   -1707.966,
+   -263.969
+  ],
+  "Aim": [
+   -15.127,
+   133.609,
+   0.0
+  ],
+  "AimPoint": [
+   442.938,
+   -1638.068,
+   -174.033
+  ],
+  "Dest": [
+   19.337,
+   -1642.852,
+   -169.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "1ae5efea-0053-4eb9-8703-1ab3e13b3e97",
+  "Title": "Jungle smoke",
+  "Desc": "Aim at the dot on the wall and jump throw · Combine with stairs smoke",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1092.043,
+   -1012.002,
+   -257.438
+  ],
+  "Aim": [
+   -22.106,
+   -162.922,
+   0.0
+  ],
+  "AimPoint": [
+   1003.48,
+   -1039.211,
+   -157.967
+  ],
+  "Dest": [
+   -812.125,
+   -1647.312,
+   18.031
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "eeb7fbac-b4a7-49db-a252-bbcb5fcf2a21",
+  "Title": "Palace Lurk smoke",
+  "Desc": "Aim between the two horizontal lines at the vertical line",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   385.873,
+   -2127.966,
+   -39.969
+  ],
+  "Aim": [
+   -5.785,
+   -126.396,
+   0.0
+  ],
+  "AimPoint": [
+   326.839,
+   -2208.05,
+   33.951
+  ],
+  "Dest": [
+   -34.791,
+   -2081.317,
+   -36.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "52bb2de0-7f6e-4169-aaa6-f3082abd9fc7",
+  "Title": "Short smoke",
+  "Desc": "Aim at the tip of the antenna",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   360.075,
+   -691.969,
+   -163.355
+  ],
+  "Aim": [
+   -24.91,
+   160.905,
+   0.0
+  ],
+  "AimPoint": [
+   274.369,
+   -662.298,
+   -58.108
+  ],
+  "Dest": [
+   -798.707,
+   -202.775,
+   -164.94
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "d85d851d-0348-457f-97ac-3b245e386e3c",
+  "Title": "Smoke conn",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1422.966,
+   36.469,
+   -167.969
+  ],
+  "Aim": [
+   -19.514,
+   -157.982,
+   0.0
+  ],
+  "AimPoint": [
+   1335.585,
+   1.132,
+   -70.725
+  ],
+  "Dest": [
+   -618.205,
+   -895.653,
+   -245.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "06d3c397-f9d9-4f49-8e5f-46cf3cd5c097",
+  "Title": "Smoke connector",
+  "Desc": "Aim at bottom of border · Align with center of the door",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1389.469,
+   70.971,
+   -167.969
+  ],
+  "Aim": [
+   -20.363,
+   -157.223,
+   0.0
+  ],
+  "AimPoint": [
+   1303.029,
+   34.676,
+   -69.332
+  ],
+  "Dest": [
+   -627.418,
+   -886.673,
+   -245.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "4169c6de-a461-43af-ba30-51d6f3b5883b",
+  "Title": "Smoke CT Spawn",
+  "Desc": "Right most part of the tower (not the beam)",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1091.134,
+   -1012.913,
+   -257.55
+  ],
+  "Aim": [
+   -29.73,
+   -143.773,
+   0.0
+  ],
+  "AimPoint": [
+   1021.084,
+   -1064.232,
+   -146.137
+  ],
+  "Dest": [
+   -876.852,
+   -2436.367,
+   -108.837
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "1ef27a97-9cb8-4612-9791-a5058defecb7",
+  "Title": "Smoke jungle",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   283.033,
+   -1599.024,
+   -175.969
+  ],
+  "Aim": [
+   -14.597,
+   -178.727,
+   0.0
+  ],
+  "AimPoint": [
+   186.285,
+   -1601.175,
+   -86.926
+  ],
+  "Dest": [
+   -627.447,
+   -1626.85,
+   -169.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "945dabe9-1941-4912-afa1-b6ae595b62d8",
+  "Title": "Smoke jungle",
+  "Desc": "Aim at the middle of the wall",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   907.6,
+   -1036.031,
+   -251.969
+  ],
+  "Aim": [
+   -61.095,
+   -162.678,
+   0.0
+  ],
+  "AimPoint": [
+   861.457,
+   -1050.422,
+   -103.384
+  ],
+  "Dest": [
+   -765.74,
+   -1557.873,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "77afdbf5-105a-4e24-b21b-4e67cdf8cde8",
+  "Title": "Smoke Jungle",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   814.949,
+   -1548.909,
+   -108.969
+  ],
+  "Aim": [
+   -29.359,
+   -178.374,
+   0.0
+  ],
+  "AimPoint": [
+   727.828,
+   -1551.382,
+   4.059
+  ],
+  "Dest": [
+   -713.967,
+   -1597.099,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "6f38392e-68ed-46aa-ac79-98556c2ef6d4",
+  "Title": "Smoke jungle and connector · From palace",
+  "Desc": "Aim slightly above the ladder, run throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   32.013,
+   -2375.969,
+   -39.969
+  ],
+  "Aim": [
+   -11.086,
+   82.633,
+   0.0
+  ],
+  "AimPoint": [
+   44.595,
+   -2278.645,
+   43.1
+  ],
+  "Dest": [
+   -702.169,
+   -1605.487,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "2d509f9b-edcc-4d2c-a35d-0a257e4c18f8",
+  "Title": "Smoke kitchen entrance",
+  "Desc": "Top part of the right most window",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   -160.028,
+   887.97,
+   -135.328
+  ],
+  "Aim": [
+   -42.075,
+   -151.911,
+   0.0
+  ],
+  "AimPoint": [
+   -225.511,
+   853.02,
+   -4.794
+  ],
+  "Dest": [
+   -2376.212,
+   -295.757,
+   -165.967
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "53157d39-88f0-4c3e-ab3a-36d6e4225594",
+  "Title": "Smoke kitchen window",
+  "Desc": "Aim at the top most part of the tower, jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   -160.033,
+   887.967,
+   -135.328
+  ],
+  "Aim": [
+   -50.946,
+   -146.992,
+   0.0
+  ],
+  "AimPoint": [
+   -212.868,
+   853.645,
+   5.851
+  ],
+  "Dest": [
+   -1916.892,
+   -292.93,
+   -165.972
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "51f9368a-bf5c-4834-b63e-851bdef10cbb",
+  "Title": "Smoke kitchen window",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   -161.03,
+   576.386,
+   -69.767
+  ],
+  "Aim": [
+   -7.744,
+   -154.721,
+   0.0
+  ],
+  "AimPoint": [
+   -250.629,
+   534.072,
+   5.346
+  ],
+  "Dest": [
+   -1871.772,
+   -318.363,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "fbc14976-c9d7-41e5-8428-b42fcd714082",
+  "Title": "Smoke short",
+  "Desc": "Aim at black dot",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   473.428,
+   401.471,
+   -251.969
+  ],
+  "Aim": [
+   -27.83,
+   -175.065,
+   0.0
+  ],
+  "AimPoint": [
+   385.322,
+   393.864,
+   -141.444
+  ],
+  "Dest": [
+   -986.798,
+   200.522,
+   -170.834
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "4a70125d-bd32-4a65-9822-7e18e2e2ce5a",
+  "Title": "Smoke Short",
+  "Desc": "Middle click jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   -160.031,
+   887.964,
+   -135.328
+  ],
+  "Aim": [
+   -45.516,
+   -134.685,
+   0.0
+  ],
+  "AimPoint": [
+   -209.306,
+   838.144,
+   -0.301
+  ],
+  "Dest": [
+   -998.699,
+   167.674,
+   -170.557
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "bb4277a1-409e-4d2c-aa01-7861913cd0e0",
+  "Title": "Smoke Stairs",
+  "Desc": "Aim slight off the edge of the building · Combine with jungle smoke",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   907.43,
+   -1036.032,
+   -251.969
+  ],
+  "Aim": [
+   -64.587,
+   -158.775,
+   0.0
+  ],
+  "AimPoint": [
+   867.428,
+   -1051.568,
+   -100.602
+  ],
+  "Dest": [
+   -520.426,
+   -1590.564,
+   -37.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "f6775926-6503-41a6-a1f2-8e3817ccc039",
+  "Title": "Smoke Stairs / Entry Flash",
+  "Desc": "Middle Click Jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   814.949,
+   -1548.909,
+   -108.969
+  ],
+  "Aim": [
+   -3.531,
+   -179.639,
+   0.0
+  ],
+  "AimPoint": [
+   715.141,
+   -1549.538,
+   -38.81
+  ],
+  "Dest": [
+   -478.928,
+   -1557.06,
+   -37.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "03d0101f-5ef9-4bd5-9548-1571d44bc74d",
+  "Title": "Smoke ticket from tetris",
+  "Desc": "Aim at the lower left corner of the window",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   -30.469,
+   -1418.031,
+   -167.969
+  ],
+  "Aim": [
+   -32.748,
+   -117.343,
+   0.0
+  ],
+  "AimPoint": [
+   -69.1,
+   -1492.74,
+   -50.108
+  ],
+  "Dest": [
+   -919.341,
+   -2402.689,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "1a77214e-c4dd-491e-b43c-bfe3f695a669",
+  "Title": "Smoke Top Mid",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   1422.964,
+   70.969,
+   -112.469
+  ],
+  "Aim": [
+   -31.867,
+   -161.932,
+   0.0
+  ],
+  "AimPoint": [
+   1342.225,
+   44.628,
+   4.327
+  ],
+  "Dest": [
+   -263.696,
+   -482.791,
+   -163.455
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "7c33c1c6-9f45-4bde-ab67-823d9c284d07",
+  "Title": "Smoke Window",
+  "Desc": "Step Jump Throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1422.969,
+   -367.969,
+   -167.969
+  ],
+  "Aim": [
+   -32.241,
+   -173.92,
+   0.0
+  ],
+  "AimPoint": [
+   1338.864,
+   -376.927,
+   -50.78
+  ],
+  "Dest": [
+   -1170.351,
+   -641.017,
+   -165.97
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "2ba3d19e-683f-4d28-8d42-ab01eb6a2004",
+  "Title": "Smoke Window",
+  "Desc": "Strafe right, jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1389.457,
+   70.972,
+   -167.969
+  ],
+  "Aim": [
+   -28.853,
+   -162.727,
+   0.0
+  ],
+  "AimPoint": [
+   1305.82,
+   44.966,
+   -55.713
+  ],
+  "Dest": [
+   -1155.31,
+   -687.634,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "ee36e993-22ed-4d05-9268-4e27a2fb7817",
+  "Title": "Top conn smoke",
+  "Desc": "Aim at the top of the antenna · jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1239.962,
+   -1159.484,
+   -246.551
+  ],
+  "Aim": [
+   -24.691,
+   -175.05,
+   0.0
+  ],
+  "AimPoint": [
+   1149.443,
+   -1167.324,
+   -147.208
+  ],
+  "Dest": [
+   -611.516,
+   -1368.772,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "abace398-457e-4a58-aeca-f033270827ad",
+  "Title": "Top mid smoke",
+  "Desc": "Tip of the antenna",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   1422.967,
+   36.469,
+   -167.969
+  ],
+  "Aim": [
+   -42.304,
+   -160.522,
+   0.0
+  ],
+  "AimPoint": [
+   1353.241,
+   11.807,
+   -36.823
+  ],
+  "Dest": [
+   34.645,
+   -481.505,
+   -184.163
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "3535834e-86a3-4de9-a963-cc29ab8aeb03",
+  "Title": "Window Smoke",
+  "Desc": "Strafe right, then jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1389.469,
+   70.968,
+   -167.969
+  ],
+  "Aim": [
+   -30.937,
+   -163.91,
+   0.0
+  ],
+  "AimPoint": [
+   1307.056,
+   47.196,
+   -52.719
+  ],
+  "Dest": [
+   -1161.228,
+   -643.97,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "c5d46018-6036-4da3-bd6b-ee3427ce422a",
+  "Title": "Window smoke",
+  "Desc": "1x at the top of the flap on the box",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   343.302,
+   -621.618,
+   -162.332
+  ],
+  "Aim": [
+   -32.384,
+   179.379,
+   0.0
+  ],
+  "AimPoint": [
+   258.86,
+   -620.703,
+   -45.647
+  ],
+  "Dest": [
+   -1187.866,
+   -603.414,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "8bca73f1-11a9-430c-b8be-594f71fd040b",
+  "Title": "Window Smoke · T Spawn 1",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1296.0,
+   32.0,
+   -167.969
+  ],
+  "Aim": [
+   -28.913,
+   -165.958,
+   0.0
+  ],
+  "AimPoint": [
+   1211.08,
+   10.761,
+   -55.781
+  ],
+  "Dest": [
+   -1162.512,
+   -632.73,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "eb78e3f5-7fc2-4ee9-ac5e-106f025ddc43",
+  "Title": "Window Smoke · T Spawn 10",
+  "Desc": "Align between two black dots, and look at bottom of dirt, walk backwards until reaching the bottom of the border, step jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1135.996,
+   -256.0,
+   -164.837
+  ],
+  "Aim": [
+   -27.583,
+   -171.159,
+   0.0
+  ],
+  "AimPoint": [
+   1048.876,
+   -269.551,
+   -54.944
+  ],
+  "Dest": [
+   -1159.484,
+   -637.949,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "6e3a5792-20d1-4925-9f54-6fd25f9a97a2",
+  "Title": "Window Smoke · T Spawn 2",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1296.0,
+   -352.0,
+   -167.969
+  ],
+  "Aim": [
+   -42.455,
+   -173.247,
+   0.0
+  ],
+  "AimPoint": [
+   1222.731,
+   -360.676,
+   -36.628
+  ],
+  "Dest": [
+   -1195.737,
+   -663.079,
+   -165.968
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "907ba19b-97c6-4db9-808d-3f42d4e5cd85",
+  "Title": "Window Smoke · T Spawn 3",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1216.0,
+   -16.0,
+   -163.969
+  ],
+  "Aim": [
+   -44.597,
+   -166.252,
+   0.0
+  ],
+  "AimPoint": [
+   1146.833,
+   -32.922,
+   -31.726
+  ],
+  "Dest": [
+   -1207.446,
+   -634.601,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "4e2928e8-e1da-449e-af53-b90610f444ae",
+  "Title": "Window Smoke · T Spawn 4",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1216.0,
+   -115.0,
+   -163.969
+  ],
+  "Aim": [
+   -44.462,
+   -167.666,
+   0.0
+  ],
+  "AimPoint": [
+   1146.276,
+   -130.245,
+   -31.893
+  ],
+  "Dest": [
+   -1200.902,
+   -670.275,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "b56dad48-54dd-4114-bf41-001d7789681a",
+  "Title": "Window Smoke · T Spawn 5",
+  "Desc": "",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1216.0,
+   -211.0,
+   -163.969
+  ],
+  "Aim": [
+   -46.032,
+   -170.316,
+   0.0
+  ],
+  "AimPoint": [
+   1147.564,
+   -222.678,
+   -29.028
+  ],
+  "Dest": [
+   -1208.039,
+   -643.047,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "0c138120-239f-4608-a6a8-0743b5ba3ce6",
+  "Title": "Window Smoke · T Spawn 6",
+  "Desc": "Walk to the right until you reach the 2nd metal railing, step jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1216.0,
+   -307.0,
+   -164.815
+  ],
+  "Aim": [
+   -46.433,
+   -170.927,
+   0.0
+  ],
+  "AimPoint": [
+   1147.942,
+   -317.868,
+   -28.521
+  ],
+  "Dest": [
+   -1208.431,
+   -674.645,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "e3243c6f-dce9-4096-8e59-7080532575b4",
+  "Title": "Window Smoke · T Spawn 7",
+  "Desc": "Aim to the left of the square mark, walk backwards until crosshair is at the dark brick, step jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1135.997,
+   32.003,
+   -164.788
+  ],
+  "Aim": [
+   -45.48,
+   -164.377,
+   0.0
+  ],
+  "AimPoint": [
+   1068.472,
+   13.12,
+   -29.67
+  ],
+  "Dest": [
+   -1208.431,
+   -674.645,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "a24b13de-faa9-4d58-b1e4-a37c9dad4b33",
+  "Title": "Window Smoke · T Spawn 8",
+  "Desc": "Align with the dirt in the center of the A, and the bottom right corner of the center in the A, walk backwards until reaching bottom of railing",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1136.049,
+   -63.973,
+   -164.5
+  ],
+  "Aim": [
+   -42.433,
+   -166.299,
+   0.0
+  ],
+  "AimPoint": [
+   1072.717,
+   -79.413,
+   -41.342
+  ],
+  "Dest": [
+   -1204.48,
+   -654.664,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "e891423b-1163-4471-87b2-2d0b47585d00",
+  "Title": "Window Smoke · T Spawn 9",
+  "Desc": "Align where the black lines from the window meet, walk backwards until above the swirl on the railing, step jump throw",
+  "Type": "smoke",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   1136.053,
+   -160.017,
+   -164.431
+  ],
+  "Aim": [
+   -42.879,
+   -168.192,
+   0.0
+  ],
+  "AimPoint": [
+   1064.323,
+   -175.012,
+   -32.782
+  ],
+  "Dest": [
+   -1194.388,
+   -675.465,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "3984b4d0-b2fa-4c63-ab60-a986e1da1c36",
+  "Title": "Molo A default",
+  "Desc": "",
+  "Type": "molotov",
+  "Side": "CT",
+  "JumpThrow": false,
+  "Stand": [
+   -992.031,
+   -1352.346,
+   -164.287
+  ],
+  "Aim": [
+   -13.321,
+   -48.353,
+   0.0
+  ],
+  "AimPoint": [
+   -927.365,
+   -1425.061,
+   -80.163
+  ],
+  "Dest": [
+   -325.834,
+   -2101.456,
+   -98.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "d85ab8c6-ee4e-4003-88ff-382d19522449",
+  "Title": "Molo bench",
+  "Desc": "",
+  "Type": "molotov",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   -1321.25,
+   815.958,
+   -79.969
+  ],
+  "Aim": [
+   -7.7,
+   -160.777,
+   0.0
+  ],
+  "AimPoint": [
+   -1414.823,
+   783.331,
+   -2.73
+  ],
+  "Dest": [
+   -2517.611,
+   290.459,
+   -165.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "66563f94-5c54-4acd-9ea8-191e796a0413",
+  "Title": "Molo stairs",
+  "Desc": "",
+  "Type": "molotov",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   460.969,
+   -1520.031,
+   -242.446
+  ],
+  "Aim": [
+   -23.287,
+   -179.668,
+   0.0
+  ],
+  "AimPoint": [
+   369.117,
+   -1520.563,
+   -145.206
+  ],
+  "Dest": [
+   -492.245,
+   -1525.549,
+   -37.969
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "64dd93fc-a965-428e-935d-9f1d6c6c5bf9",
+  "Title": "Flash B",
+  "Desc": "Running jump throw",
+  "Type": "flash",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   -396.252,
+   598.036,
+   -80.292
+  ],
+  "Aim": [
+   -14.663,
+   -175.518,
+   0.0
+  ],
+  "AimPoint": [
+   -492.699,
+   590.476,
+   8.529
+  ],
+  "Dest": [
+   -1808.161,
+   489.617,
+   446.879
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "1f291e66-1ba5-4e53-a2de-c23cfd49106d",
+  "Title": "Flash jungle",
+  "Desc": "",
+  "Type": "flash",
+  "Side": "T",
+  "JumpThrow": true,
+  "Stand": [
+   460.971,
+   -1520.028,
+   -242.447
+  ],
+  "Aim": [
+   2.981,
+   -174.586,
+   0.0
+  ],
+  "AimPoint": [
+   361.551,
+   -1529.45,
+   -189.941
+  ],
+  "Dest": [
+   -649.827,
+   -1625.296,
+   -5.277
+  ],
+  "Threshold": 80.0
+ },
+ {
+  "Id": "58d008f2-147f-423a-a2ca-f07159ea2940",
+  "Title": "Lamp flash",
+  "Desc": "",
+  "Type": "flash",
+  "Side": "T",
+  "JumpThrow": false,
+  "Stand": [
+   873.61,
+   -1036.031,
+   -251.969
+  ],
+  "Aim": [
+   -33.452,
+   -154.219,
+   0.0
+  ],
+  "AimPoint": [
+   798.48,
+   -1072.32,
+   -135.506
+  ],
+  "Dest": [
+   95.68,
+   -1411.78,
+   96.838
+  ],
+  "Threshold": 80.0
+ }
+]
