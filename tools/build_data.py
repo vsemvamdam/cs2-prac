@@ -121,6 +121,9 @@ def build_lineups(ann_repo, out_dir):
             if desc.lower().startswith("setpos"):
                 desc = ""  # служебная координата автора, не подсказка
             gtype = TYPE_MAP.get(str(m.get("GrenadeType", "smoke")).lower(), "smoke")
+            jump = bool(m.get("JumpThrow", False))
+            if not jump and re.search(r"jump\s*-?\s*throw|jumpthrow", (title + " " + desc).lower()):
+                jump = True  # флаг в разметке не стоит, а в подсказке написано «jump throw»
             low = title.lower()
             if gtype == "smoke" and (low.startswith("molo") or " molo" in low or "molotov" in low or "incend" in low):
                 gtype = "molotov"  # в исходных данных встречается молотов с типом smoke
@@ -130,7 +133,7 @@ def build_lineups(ann_repo, out_dir):
                 "Desc": desc,
                 "Type": gtype,
                 "Side": side_of(m.get("Color")),
-                "JumpThrow": bool(m.get("JumpThrow", False)),
+                "JumpThrow": jump,
                 "Stand": [round(x, 3) for x in m["Position"]],
                 "Aim": [round(x, 3) for x in a["Angles"]],
                 "AimPoint": [round(x, 3) for x in a["Position"]],

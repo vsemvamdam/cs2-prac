@@ -1252,7 +1252,7 @@
   "Desc": "X: Aim between 2nd and 3rd stone · Y: Align between tower windows · W + jump throw",
   "Type": "smoke",
   "Side": "T",
-  "JumpThrow": false,
+  "JumpThrow": true,
   "Stand": [
    1134.114,
    587.969,

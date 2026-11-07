@@ -35,6 +35,9 @@ public sealed class ThrowRef
     public ushort ItemIndex { get; set; }
     public float[] PlayerPos { get; set; } = new float[3];
     public float[] PlayerAng { get; set; } = new float[3];
+    /// <summary>Скорость игрока в момент броска (граната получает её ×1,25) и высота глаз.</summary>
+    public float[] PlayerVel { get; set; } = new float[3];
+    public float EyeZ { get; set; }
     public bool Jumped { get; set; }
     public string Place { get; set; } = "";
     // Физика снаряда в момент броска: у гранаты, созданной заново, по умолчанию другие значения.

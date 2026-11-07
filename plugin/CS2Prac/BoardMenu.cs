@@ -152,7 +152,11 @@ public sealed class BoardMenu : IMenuInstance
             var (fx, fy) = Geo.Forward2D(_yaw);
             var eyeZ = pawn.AbsOrigin.Z + pawn.ViewOffset.Z;
             var (lx, ly) = (MathF.Sin(_yaw * MathF.PI / 180f), -MathF.Cos(_yaw * MathF.PI / 180f));
-            _center = new[] { pawn.AbsOrigin.X + fx * Distance - lx * ShiftLeft, pawn.AbsOrigin.Y + fy * Distance - ly * ShiftLeft, eyeZ + RaiseZ };
+            // По вертикали — туда, куда смотрит игрок (в пределах ±25°): иначе при взгляде вверх, как на многих
+            // раскидках, табло уезжает вниз под оружие и HUD.
+            var pitch = Math.Clamp(pawn.EyeAngles.X, -25f, 25f);
+            var lookZ = -MathF.Tan(pitch * MathF.PI / 180f) * Distance;
+            _center = new[] { pawn.AbsOrigin.X + fx * Distance - lx * ShiftLeft, pawn.AbsOrigin.Y + fy * Distance - ly * ShiftLeft, eyeZ + RaiseZ + lookZ };
         }
 
         var first = _pageIdx * PerPageNow;

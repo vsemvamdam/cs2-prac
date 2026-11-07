@@ -30,6 +30,8 @@ public partial class CS2Prac
         public string? LineupId;
         public ThrowRef? Ref;
         public string? CheckId;
+        /// <summary>Граната симуляции «Проверить разметку».</summary>
+        public string? SimId;
         public DateTime At = DateTime.UtcNow;
     }
 
@@ -134,10 +136,14 @@ public partial class CS2Prac
     {
         WorldText.Kill(_labels);
         if (Mode != "smokes") return;
+        var placed = new List<float[]>();
         foreach (var l in AllLineups)
         {
             if (_hideLabelsNear != null && Geo.Dist2D(l.Stand, _hideLabelsNear) < 48f && MathF.Abs(l.Stand[2] - _hideLabelsNear[2]) < 72f) continue;
-            var pos = new Vector(l.Stand[0], l.Stand[1], l.Stand[2] + 88f);
+            // Несколько раскидок с одной точки: подписи ставим друг над другом, а не в одно место
+            var stack = placed.Count(p => Geo.Dist2D(p, l.Stand) < 40f && MathF.Abs(p[2] - l.Stand[2]) < 40f);
+            placed.Add(l.Stand);
+            var pos = new Vector(l.Stand[0], l.Stand[1], l.Stand[2] + 88f + stack * 7f);
             var text = $"{TypeRu(l.Type)}: {l.Title}{StatusMark(l)}";
             var color = TypeColor(l.Type);
             if (_checks.Items.TryGetValue(l.Id, out var c) && c.Status == "miss") color = Color.FromArgb(255, 255, 80, 80);
@@ -160,7 +166,13 @@ public partial class CS2Prac
         var yaw = l.Aim[1];
         if (l.AimPoint != null)
         {
-            var e = WorldText.Spawn("( + )", Geo.Vec(l.AimPoint), WorldText.FacingViewer(yaw), Color.FromArgb(255, 80, 255, 120), 40f, 0.1f,
+            // Маркер ставим на луч прицела раскидки (углы Aim), а не в AimPoint из разметки:
+            // AimPoint в библиотеке часто лежит ниже прицела (на Mirage до 3,6°, на Dust2 до 36°).
+            var eye = new[] { l.Stand[0], l.Stand[1], l.Stand[2] + 64.09f };
+            var dist = Math.Clamp(Geo.Dist(eye, l.AimPoint), 60f, 400f);
+            var (dx, dy, dz) = Geo.Dir(l.Aim[0], l.Aim[1]);
+            var at = new Vector(eye[0] + dx * dist, eye[1] + dy * dist, eye[2] + dz * dist);
+            var e = WorldText.Spawn("( + )", at, WorldText.FacingViewer(yaw), Color.FromArgb(255, 80, 255, 120), 40f, 0.1f * dist / 140f,
                 vjustify: PointWorldTextJustifyVertical_t.POINT_WORLD_TEXT_JUSTIFY_VERTICAL_CENTER);
             if (e != null) list.Add(e);
         }
@@ -290,6 +302,8 @@ public partial class CS2Prac
             ItemIndex = p.ItemIndex,
             PlayerPos = Geo.Arr(cPawn.AbsOrigin),
             PlayerAng = Geo.Arr(cPawn.EyeAngles),
+            PlayerVel = cPawn.AbsVelocity != null ? Geo.Arr(cPawn.AbsVelocity) : new float[3],
+            EyeZ = cPawn.ViewOffset.Z,
             Jumped = (cPawn.Flags & (uint)PlayerFlags.FL_ONGROUND) == 0,
             Place = cPawn.LastPlaceName ?? "",
             Gravity = p.GravityScale,
@@ -300,7 +314,15 @@ public partial class CS2Prac
         PLog.Info($"Бросок {type}: вылет ({r.Pos[0]:0.0}, {r.Pos[1]:0.0}, {r.Pos[2]:0.0}), скорость ({r.Vel[0]:0.0}, {r.Vel[1]:0.0}, {r.Vel[2]:0.0}), " +
                   $"гравитация {r.Gravity:0.###}/{r.ActualGravity:0.###}, трение {r.Friction:0.###}, упругость {r.Elasticity:0.###}, тип движения {p.MoveType}");
         _lastThrow[player.Slot] = r;
-        _nades[index] = new TrackedNade { Slot = player.Slot, Type = type, Ref = r, LineupId = MatchLineup(player, r)?.Id };
+        var matched = MatchLineup(player, r);
+        _nades[index] = new TrackedNade { Slot = player.Slot, Type = type, Ref = r, LineupId = matched?.Id };
+        Journal(new
+        {
+            kind = "throw", map = _map, build = _build, idx = index, type, lineup = matched?.Id, title = matched?.Title,
+            pos = r.Pos, vel = r.Vel, ppos = r.PlayerPos, pang = r.PlayerAng, pvel = r.PlayerVel, eyeZ = r.EyeZ, jumped = r.Jumped,
+            gravity = r.Gravity, actualGravity = r.ActualGravity, friction = r.Friction, elasticity = r.Elasticity,
+            model = matched != null ? ModelThrow(matched, out _, r.Jumped) is { } m ? new { pos = m.Pos, vel = m.Vel } : null : null,
+        });
         if (_nades.Count > 256)
             foreach (var old in _nades.Where(n => (DateTime.UtcNow - n.Value.At).TotalSeconds > 60).Select(n => n.Key).ToList())
                 _nades.Remove(old);
@@ -332,7 +354,7 @@ public partial class CS2Prac
         else if (type == "molotov" && user != null)
         {
             // molotov_detonate не сообщает индекс снаряда: берём последний молотов этого игрока.
-            var found = _nades.Where(n => n.Value.Type == "molotov" && (n.Value.Slot == user.Slot || n.Value.CheckId != null))
+            var found = _nades.Where(n => n.Value.Type == "molotov" && (n.Value.Slot == user.Slot || n.Value.CheckId != null || n.Value.SimId != null))
                 .OrderBy(n => n.Value.At).FirstOrDefault();
             if (found.Value != null) { t = found.Value; key = found.Key; }
         }
@@ -340,6 +362,11 @@ public partial class CS2Prac
         _nades.Remove(key);
         var det = new[] { x, y, z };
 
+        if (t.SimId != null)
+        {
+            OnSimLanded(t.SimId, det);
+            return;
+        }
         if (t.CheckId != null)
         {
             OnCheckDetonated(t.CheckId, det);
@@ -348,6 +375,8 @@ public partial class CS2Prac
         if (t.Ref != null) t.Ref.Landed = det;
 
         var l = FindLineup(t.LineupId);
+        Journal(new { kind = "result", map = _map, idx = key, type, lineup = l?.Id, title = l?.Title, det, dest = l?.Dest,
+                      dist = l?.Dest != null ? Geo.Dist(det, l.Dest) : -1f });
         if (l?.Dest == null) return;
         var player = Utilities.GetPlayerFromSlot(t.Slot);
         if (player == null || !player.IsValid) return;

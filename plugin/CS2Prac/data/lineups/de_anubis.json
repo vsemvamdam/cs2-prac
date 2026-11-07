@@ -2267,7 +2267,7 @@
   "Desc": "Right click jump throw",
   "Type": "flash",
   "Side": "T",
-  "JumpThrow": false,
+  "JumpThrow": true,
   "Stand": [
    -16.533,
    440.033,

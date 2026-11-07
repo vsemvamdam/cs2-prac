@@ -334,6 +334,8 @@ function Install-PracPlugin {
     $code = $LASTEXITCODE
     $ErrorActionPreference = $old
     if ($code -ge 8) { throw "robocopy плагина завершился с кодом $code" }
+    # Куда плагину дублировать журнал бросков (logs рядом с лаунчером) — для диагностики без доступа к папке сервера
+    Set-Content -Path (Join-Path $dst 'logdir.txt') -Value $LogDir -Encoding UTF8
     $gd = Join-Path $src 'gamedata\cs2prac.json'
     if (Test-Path $gd) { Copy-Item $gd (Join-Path $Addons 'counterstrikesharp\gamedata\cs2prac.json') -Force }
     $ver = (Get-Item (Join-Path $dst 'CS2Prac.dll')).VersionInfo.FileVersion
@@ -608,6 +610,12 @@ function Invoke-Diag([string]$OutName = 'diag.txt') {
     foreach ($f in $recent) {
         $o.Add("--- CSS лог $($f.Name), последние 150 строк ---")
         $o.AddRange([string[]]@(Get-Content $f.FullName -Tail 150 -Encoding UTF8))
+    }
+    # Журнал бросков (реальных и проверки разметки) — чтобы разбирать промахи раскидок
+    $journal = Join-Path $Plugins 'CS2Prac\userdata\throws.jsonl'
+    if (Test-Path $journal) {
+        Copy-Item $journal (Join-Path $LogDir 'throws.jsonl') -Force
+        $o.Add("Журнал бросков скопирован: logs\throws.jsonl ($((Get-Item $journal).Length) байт)")
     }
     $o | Set-Content -Path $d -Encoding UTF8
     Log "Диагностика сохранена: $d"

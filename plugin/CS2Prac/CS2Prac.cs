@@ -62,6 +62,8 @@ public partial class CS2Prac : BasePlugin
 
         // css_prac не регистрируем: это команда MatchZy (включает режим практики)
         AddCommand("css_menu", "Меню CS2 Prac", (p, _) => { if (p != null) ToggleMenu(p); });
+        AddCommand("css_simparam", "Константы модели броска для проверки разметки", OnSimParam);
+        AddCommand("css_sim", "Проверить разметку карты", (p, _) => { if (p != null) StartSim(p); });
         AddCommand("css_m", "Меню CS2 Prac", (p, _) => { if (p != null) ToggleMenu(p); });
         AddCommand("css_skins", "Оружие и скины", (p, _) => { if (p != null) OpenMenu(p, LoadoutPage(p), false); });
         AddCommand("css_ws", "Оружие и скины", (p, _) => { if (p != null) OpenMenu(p, LoadoutPage(p), false); });
@@ -319,6 +321,7 @@ public partial class CS2Prac : BasePlugin
     {
         var page = new MenuPage { Title = "Тренировка", Back = () => MainPage(p) };
         page.Add("Проверить все раскидки (после патча)", StartCheck, Color.FromArgb(255, 150, 200, 255));
+        page.Add("Проверить разметку карты (сервер бросит сам)", StartSim, Color.FromArgb(255, 150, 200, 255));
         page.Add("Повторить последний бросок", pl => { Rethrow(pl); });
         page.Add("Вернуться на точку последнего броска", pl =>
         {

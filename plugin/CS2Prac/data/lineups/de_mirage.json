@@ -469,7 +469,7 @@
   "Desc": "Middle click jump throw",
   "Type": "smoke",
   "Side": "T",
-  "JumpThrow": false,
+  "JumpThrow": true,
   "Stand": [
    -160.031,
    887.964,
